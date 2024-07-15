@@ -1,0 +1,25 @@
+# One to Many Relationship
+
+users
+------
+id int pk
+username str unique
+password str 
+active bool default=true
+
+
+posts
+---------
+id int pk
+title str unique
+slug str unique
+resume text
+content text
+users_id int fk >- users.id
+
+media
+---------
+id int pk
+url str
+type enum
+posts_id int fk >- posts.id

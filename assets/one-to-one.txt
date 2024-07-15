@@ -1,0 +1,20 @@
+# One to One Relationship
+
+users
+------
+id int pk
+username str unique
+password str 
+active bool default=true
+
+
+profiles
+---------
+id int pk
+biography text null
+twitter str null
+facebook str null
+instagram str null
+github str null
+linkedin str null
+users_id int fk - users.id
